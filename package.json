@@ -29,7 +29,18 @@
         "key": "Ctrl-k w",
         "command": "obakeCode.openWorkspace"
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "obake-code configuration",
+      "properties": {
+        "obakeCode.apiPort": {
+          "type": "number",
+          "default": 9435,
+          "description": "Obake Terminal API Port"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "yarn run compile",

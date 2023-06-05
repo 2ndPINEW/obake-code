@@ -1,7 +1,9 @@
+import * as vscode from "vscode";
 import axios from "axios";
 
-const PORT = 9435;
-const API_BASE = `http://localhost:${PORT}/`;
+const apiPort = vscode.workspace.getConfiguration("obakeCode").get("apiPort");
+
+const API_BASE = `http://localhost:${apiPort}/`;
 
 export interface Workspace {
   cwd: string;
